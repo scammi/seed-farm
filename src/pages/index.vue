@@ -3,28 +3,25 @@
       <div class="info">
         <div class="container">
           <div class="info__image">
-             <img src="../assets/images/cat.png" alt="">
+             <img src="../assets/images/semilla_logo.jpg" alt="">
           </div>
           <div class="title">Seed Farm</div>
           <div class="balance">
             <div class="balance__inner">
               <div class="balance__item">
-                <div class="balance__title">Your Roobee Balance</div>
+                <div class="balance__title">Your SEED Balance</div>
                 <div class="balance__amount">
                   {{ toFixedTwo(roobeeBalance / 1e18) }}
                 </div>
                 <div class="balance__total">
                   <div class="balance__total-name">Reward Per Token</div>
-                  <div class="balance__total-cost">{{ toFixedTwo(rewardPerToken / 1e18) }} ROOBEE</div>
+                  <div class="balance__total-cost">{{ toFixedTwo(rewardPerToken / 1e18) }} SEED</div>
                 </div>
-              </div>
-              <div class="balance__item balance__item--farm">
-                <div class="balance__title">Farming is over.<br>Stay tuned!</div>
               </div>
             </div>
             <div class="balance__info">
               <div class="balance__icon">!</div>
-              <div class="balance__name">Pro Tip</div> - Add your Uniswap ROOBEE-ETH LPs liquidity provider tokens to farm ROOBEE
+              <div class="balance__name">Pro Tip</div> - Add your Uniswap SEED-ETH LPs liquidity provider tokens to farm SEED
             </div>
             <div class="balance__button">
               <router-link :to="{name: 'farming'}" class="button button--yellow button--small">Start Farming</router-link>

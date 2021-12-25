@@ -230,7 +230,7 @@ export default new Vuex.Store({
           commit('setRewardPerToken', await state.roobeeFarm.methods.rewardPerToken().call()); //OK staking contract
           commit('setRewardPerBlock', await state.roobeeFarm.methods.rewardRate().call()); //OK staking contract
           commit('setFinishPeriod', await state.roobeeFarm.methods.periodFinish().call()); //OK staking contract
-          commit('setRewardsDuration', await state.roobeeFarm.methods.rewardsDuration().call()); // missin
+          // commit('setRewardsDuration', await state.roobeeFarm.methods.rewardsDuration().call()); // missin
           commit('setRoobeeFarmSupply', await state.roobeeFarm.methods.totalSupply().call()); //OK staking contract
         } catch (err) {
           if (checkNetwork()) {

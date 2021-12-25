@@ -12,7 +12,7 @@ const routes = [
         name: 'index',
         component: Home,
         meta: {
-          title: 'RoobeeFinance',
+          title: 'SeedFinance',
           metaTags: [
             {
               name: 'description',
@@ -30,7 +30,7 @@ const routes = [
         name: 'farming',
         component: Farming,
         meta: {
-          title: 'RoobeeFinance',
+          title: 'SeedeFinance',
           metaTags: [
             {
               name: 'description',
@@ -48,7 +48,7 @@ const routes = [
         name: 'about',
         component: About,
         meta: {
-          title: 'RoobeeFinance',
+          title: 'SeedFinance',
           metaTags: [
             {
               name: 'description',

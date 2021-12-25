@@ -9,7 +9,6 @@
           <router-link :to="{name: 'index'}" class="header__link header__link--active">Home</router-link>
           <router-link :to="{name: 'farming'}" class="header__link">Farming</router-link>
           <router-link :to="{name: 'about'}" class="header__link">About</router-link>
-          <a href="https://bsc.roobee.finance/" class="header__link">BSC Network</a>
         </nav>
         <div class="header__box">
           <a href="#" class="button header__button" @click.prevent="showModal" :class="{'button--green': metamaskAccount}">{{ metamaskAccount ? `${metamaskAccount.substring(0, 6 + 2)}...${metamaskAccount.substring(42 - 6)}` : 'Unlock wallet' }}</a>
@@ -20,7 +19,6 @@
                 <router-link :to="{name: 'index'}" class="header__link header__link--active">Home</router-link>
                 <router-link :to="{name: 'farming'}" class="header__link">Farming</router-link>
                 <router-link :to="{name: 'about'}" class="header__link">About</router-link>
-                <a href="https://bsc.roobee.finance/" class="header__link">BSC Network</a>
               </div>
             </transition>
           </div>
