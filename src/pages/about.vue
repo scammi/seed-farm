@@ -10,7 +10,7 @@
           <div class="info__about-text">The mission of SEED is to give any person with any level income an opportunity to invest starting just from $10 in investment products that are only available to big institutional players, qualified investors, millionaires, and funds. With the help of the SEED platform, the goal is to empower people from all over the world to invest in any of the many investment products available on the platform: crypto, stocks, ETFs, IPOs, real estate, and more. To find more information you can visit the platform <a target="blank" href="https://SEED.io/">website</a>.
           </div>
           <div class="title title--small">What is SEED.finance?</div>
-          <div class="info__about-text">SEED.Finance is a platform that aims to reward the providers of Uniswap SEED-ETH liquidity. All Uniswap liquidity providers can use their SEED-ETH LPs to farm SEED tokens.<br>
+          <div class="info__about-text">SEED.Finance is a platform that aims to reward the providers of SpookySwap SEED-ETH liquidity. All SpookySwap liquidity providers can use their SEED-ETH LPs to farm SEED tokens.<br>
             Tokens allocated for farming: 1,800,000 SEED<br>
             Daily SEED Pool Rewards: 30,000 SEED<br>
             Farming Period: 60 days

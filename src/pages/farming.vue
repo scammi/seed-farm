@@ -19,7 +19,7 @@
           <span class="value">{{ toFixedTwo(rewardPerBlock * 5760 * 15 / 1e18) }}</span>
         </div>
       </div>
-      <h2 class="farm-label">Add LPs SEED/ETH from Uniswap pool to farm SEED!</h2>
+      <h2 class="farm-label">Add LPs SEED/ETH from SpookySwap pool to farm SEED!</h2>
       <div class="balance">
         <div class="balance__inner">
           <div class="balance__item">
@@ -50,7 +50,7 @@
         </div>
         <div class="balance__info">
           <div class="balance__icon">!</div>
-          <div class="balance__name">Pro Tip</div> - Add your Uniswap SEED-ETH LPs liquidity provider tokens to farm SEED
+          <div class="balance__name">Pro Tip</div> - Add your SpookySwap SEED-ETH LPs liquidity provider tokens to farm SEED
         </div>
       </div>
     </div>

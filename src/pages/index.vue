@@ -21,7 +21,7 @@
             </div>
             <div class="balance__info">
               <div class="balance__icon">!</div>
-              <div class="balance__name">Pro Tip</div> - Add your Uniswap SEED-ETH LPs liquidity provider tokens to farm SEED
+              <div class="balance__name">Pro Tip</div> - Add your SpookySwap SEED-ETH LPs liquidity provider tokens to farm SEED
             </div>
             <div class="balance__button">
               <router-link :to="{name: 'farming'}" class="button button--yellow button--small">Start Farming</router-link>
