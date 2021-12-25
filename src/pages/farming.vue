@@ -16,7 +16,7 @@
         </div>
         <div class="farm-data__item">
           <h2 class="title">Daily ROOBEE Pool Rewards</h2>
-          <span class="value">{{ numberWithSpaces(toFixedTwo(rewardPerBlock * 5760 * 15 / 1e18)) }}</span>
+          <span class="value">{{ toFixedTwo(rewardPerBlock * 5760 * 15 / 1e18) }}</span>
         </div>
       </div>
       <h2 class="farm-label">Add LPs ROOBEE/ETH from Uniswap pool to farm ROOBEE!</h2>
@@ -102,12 +102,6 @@ export default {
 
     showWithdrawModal() {
       this.$refs['withdraw-modal'].show = true
-    },
-
-    numberWithSpaces(x) {
-      let parts = x.toString().split(".");
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-      return parts.join(".");
     },
 
     toFixedTwo(num) {

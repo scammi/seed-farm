@@ -207,7 +207,7 @@ export default new Vuex.Store({
         }
 
         commit('setRoobeeBalance', await state.roobeeToken.methods.balanceOf(state.metamaskAccount).call());
-        commit('setEarned', await state.roobeeFarm.methods.earned(state.metamaskAccount).call());
+        commit('setEarned', await state.roobeeFarm.methods.earned(state.metamaskAccount).call());//OK staking contract 
         commit('setIsApproved', (await state.kovanStaking.methods.allowance(state.metamaskAccount, process.env.VUE_APP_FARM_ADDRESS).call()) > 0);
         commit('setAvailableToDeposit', await state.kovanStaking.methods.balanceOf(state.metamaskAccount).call())
         commit('setRoobeeFarmBalance', await state.roobeeFarm.methods.balanceOf(state.metamaskAccount).call())
@@ -227,11 +227,11 @@ export default new Vuex.Store({
       }
       if (state.roobeeFarm) {
         try {
-          commit('setRewardPerToken', await state.roobeeFarm.methods.rewardPerToken().call());
-          commit('setRewardPerBlock', await state.roobeeFarm.methods.rewardRate().call());
-          commit('setFinishPeriod', await state.roobeeFarm.methods.periodFinish().call());
-          commit('setRewardsDuration', await state.roobeeFarm.methods.rewardsDuration().call());
-          commit('setRoobeeFarmSupply', await state.roobeeFarm.methods.totalSupply().call());
+          commit('setRewardPerToken', await state.roobeeFarm.methods.rewardPerToken().call()); //OK staking contract
+          commit('setRewardPerBlock', await state.roobeeFarm.methods.rewardRate().call()); //OK staking contract
+          commit('setFinishPeriod', await state.roobeeFarm.methods.periodFinish().call()); //OK staking contract
+          commit('setRewardsDuration', await state.roobeeFarm.methods.rewardsDuration().call()); // missin
+          commit('setRoobeeFarmSupply', await state.roobeeFarm.methods.totalSupply().call()); //OK staking contract
         } catch (err) {
           if (checkNetwork()) {
             console.error(`Roobee Farm: ${err.message}`);
@@ -367,7 +367,7 @@ export default new Vuex.Store({
 
 const checkNetwork = () => {
   networkError();
-  if (window.ethereum.networkVersion == (process.env.NODE_ENV === 'production' ? 1 : 42)) return true // kovan = 42, mainnet = 1
+  if (window.ethereum.networkVersion == (process.env.NODE_ENV === 'production' ? 250 : 250)) return true // kovan = 42, mainnet = 1
   return false
 }
 
@@ -386,7 +386,7 @@ const debounce = (func, wait) => {
 }
 
 const networkError = debounce(() => {
-  const desiredNetwork = process.env.NODE_ENV === 'production' ? 'MAINNET' : 'KOVAN';
+  const desiredNetwork = process.env.NODE_ENV === 'production' ? 'FANTOM' : 'FANTOM';
   console.error(`Wrong network, connect to ${desiredNetwork}`);
   Vue.prototype.$toasted.error(`Wrong network, connect to ${desiredNetwork}`, { duration: 0 });
 }, 2000);

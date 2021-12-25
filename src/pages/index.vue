@@ -5,7 +5,7 @@
           <div class="info__image">
              <img src="../assets/images/cat.png" alt="">
           </div>
-          <div class="title">Roobee Farm</div>
+          <div class="title">Seed Farm</div>
           <div class="balance">
             <div class="balance__inner">
               <div class="balance__item">
