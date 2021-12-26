@@ -15,6 +15,7 @@ export default new Vuex.Store({
     roobeeFarm: null,
     roobeeToken: null,
     kovanStaking: null,
+    lp: null,
     graph: null,
 
     // user specific data
@@ -48,6 +49,10 @@ export default new Vuex.Store({
 
     setRoobeeToken(state, payload) {
       state.roobeeToken = payload
+    },
+
+    setLp(state, payload) {
+      state.lp = payload
     },
 
     setRoobeeTokenSupply(state, payload) {
@@ -145,6 +150,7 @@ export default new Vuex.Store({
         commit('setRoobeeFarm', createContract('farm'));
         commit('setRoobeeToken', createContract('rewards'));
         commit('setKovanStaking', createContract('staking'));
+        commit('setLp', createContract('lp'));
 
         if (!state.metamaskConnector || state.metamaskConnector.status == 'NOT_INSTALLED') {
           localStorage.removeItem('account-unlocked')
@@ -210,7 +216,7 @@ export default new Vuex.Store({
         commit('setEarned', await state.roobeeFarm.methods.earned(state.metamaskAccount).call());//OK staking contract 
         commit('setIsApproved', (await state.kovanStaking.methods.allowance(state.metamaskAccount, process.env.VUE_APP_FARM_ADDRESS).call()) > 0);
         commit('setAvailableToDeposit', await state.kovanStaking.methods.balanceOf(state.metamaskAccount).call())
-        commit('setRoobeeFarmBalance', await state.roobeeFarm.methods.balanceOf(state.metamaskAccount).call())
+        commit('setRoobeeFarmBalance', await state.lp.methods.balanceOf(state.metamaskAccount).call())
       }
     },
 

@@ -12,6 +12,8 @@ const createContract = (whichABI) => {
 		return new web3.eth.Contract(roobeeTokenKovanRewardsStakingContractABI, process.env.VUE_APP_REWARDS_ADDRESS);
 	else if (whichABI == 'staking')
 		return new web3.eth.Contract(roobeeTokenKovanRewardsStakingContractABI, process.env.VUE_APP_STACKING_ADDRESS);
+	else if (whichABI == 'lp')
+		return new web3.eth.Contract(roobeeTokenKovanRewardsStakingContractABI, process.env.VUE_APP_LP_ADDRESS);
 }
 
 export default createContract;
