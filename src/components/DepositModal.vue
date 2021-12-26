@@ -12,7 +12,7 @@
             <div class="deposit">
               <div class="deposit__range">
                 <div class="deposit__text">Available ROOBEE-ETH LPs</div>
-                <div class="deposit__text deposit__text--black">{{  toFixedTwo(availableToDeposit / 1e18) }}</div>
+                <div class="deposit__text deposit__text--black">{{  toFixedTwo(roobeeFarmBalance / 1e18) }}</div>
               </div>
               <input placeholder="Placeholder" class="deposit__input" v-model="amount" type="number">
               <div class="deposit__row">
@@ -61,7 +61,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['availableToDeposit'])
+    ...mapState(['roobeeFarmBalance'])
   },
 
   methods: {
@@ -73,7 +73,7 @@ export default {
     },
 
     maxOut() {
-      this.amount = this.availableToDeposit / 1e18;
+      this.amount = this.roobeeFarmBalance / 1e18;
     },
 
     toFixedTwo(num) {
