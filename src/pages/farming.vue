@@ -35,10 +35,10 @@
             <div class="balance__amount balance__amount--mb">
               {{ toFixedTwo(roobeeFarmBalance / 1e18) }}
             </div>
-            <div class="balance__title balance__title--mb">SEED-ETH LPs Token Staked</div>
+            <div class="balance__title balance__title--mb">SEED-FTM LPs Token Staked</div>
             <transition name="fade" mode="out-in">
               <div class="balance__button" v-if="!isApproved" key="1">
-                <button class="button button--yellow button--small" @click="approve">Approve SEED-ETH LPs</button>
+                <button class="button button--yellow button--small" @click="approve">Approve SEED-FTM LPs</button>
               </div>
               <div class="balance__buttons" v-else key="2">
                 <button class="button button--mr button--yellow button--small button--mb" @click="showDepositModal">Deposit
@@ -50,7 +50,7 @@
         </div>
         <div class="balance__info">
           <div class="balance__icon">!</div>
-          <div class="balance__name">Pro Tip</div> - Add your SpookySwap SEED-ETH LPs liquidity provider tokens to farm SEED
+          <div class="balance__name">Pro Tip</div> - Add your SpookySwap SEED-FTM LPs liquidity provider tokens to farm SEED
         </div>
       </div>
     </div>
@@ -89,7 +89,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['roobeeBalance', 'roobeeFarmSupply', 'earned', 'rewardPerBlock', 'isApproved', 'firstEnter', 'roobeeFarmBalance', 'metamaskAccount']),
+    ...mapState(['roobeeBroobeeBalancee', 'roobeeFarmSupply', 'earned', 'rewardPerBlock', 'isApproved', 'firstEnter', 'roobeeFarmBalance', 'metamaskAccount']),
     ...mapGetters(['apy'])
   },
 
